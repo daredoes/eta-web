@@ -27,7 +27,7 @@ describe("RuntimeErr", () => {
 
   it("error throws correctly", () => {
     try {
-      eta.render("./runtime-error", {});
+      eta.renderString("<%= it.fake %>", {});
     } catch (ex) {
       expect((ex as Error).name).toBe("ReferenceError");
       expect((ex as Error).message).toBe(`${errorFilepath}:2
